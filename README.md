@@ -10,18 +10,19 @@ Este proyecto forma parte de un entorno **End-to-End** enfocado en optimizar la 
 
 Así es como luce el panel de control interactivo en tiempo real al procesar una vacante con el método QA80:
 
-![ATS Ingesta y Análisis](assets/ats_ingesta.png)
+![ATS Ingesta](ats%20ingesta.png)
 
 ---
 
-## 📐 Modelo Entidad-Relación (ER)
+## 📐 Base de Datos y Modelo Entidad-Relación (PostgreSQL)
 
-El diseño se estructuró bajo buenas prácticas de bases de datos relacionales, garantizando la integridad de los datos, la automatización y la lógica de negocio a nivel de motor:
-* **`qa80.perfil_candidato`**: Almacena las competencias base del candidato (tecnologías, herramientas, nivel de inglés y resumen de experiencia).
-* **`qa80.vacante`**: Contiene la información detallada de cada oferta laboral extraída y registrada.
-* **`qa80.evaluacion_80qa`**: Almacena las puntuaciones técnicas cualitativas y cuantitativas emitidas tras la evaluación.
-* **Vistas avanzadas (`qa80.vw_evaluacion_80qa`)**: Ejecutan la lógica de negocio central (cálculo ponderado, veredictos automáticos y compatibilidad salarial) directamente en la base de datos.
-*(Esquema relacional en pgAdmin mostrando las tablas perfil_candidato, vacante, evaluacion_80qa, postulacion, interaccion y migracion_excel)*
+El diseño se estructuró bajo buenas prácticas de bases de datos relacionales en un esquema dedicado (`qa80`), garantizando la integridad de los datos, la automatización y la lógica de negocio a nivel de motor:
+
+* **Diagrama Entidad-Relación (ER):** Estructura relacional completa en pgAdmin que conecta las tablas de candidatos, vacantes, evaluaciones, interacciones y el módulo de migración.
+![Diagrama ER](Captura%20de%20pantalla%202026-08-16%20191842.png)
+
+* **Ejecución y Consultas SQL:** Vista en tiempo real de los datos consolidados mediante consultas avanzadas sobre las tablas del esquema.
+![Datos y Consultas PostgreSQL](Captura%20de%20pantalla%202026-08-16%20191646.png)
 
 ---
 
