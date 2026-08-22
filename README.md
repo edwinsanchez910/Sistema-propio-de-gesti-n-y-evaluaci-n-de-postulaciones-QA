@@ -6,6 +6,14 @@ Este proyecto forma parte de un entorno **End-to-End** enfocado en optimizar la 
 
 ---
 
+## 🖥️ Interfaz en Ejecución (Streamlit + Gemini)
+
+Así es como luce el panel de control interactivo en tiempo real al procesar una vacante con el método QA80:
+
+![ATS Ingesta y Análisis](assets/ats_ingesta.png)
+
+---
+
 ## 📐 Modelo Entidad-Relación (ER)
 
 El diseño se estructuró bajo buenas prácticas de bases de datos relacionales, garantizando la integridad de los datos, la automatización y la lógica de negocio a nivel de motor:
@@ -32,7 +40,7 @@ El diseño se estructuró bajo buenas prácticas de bases de datos relacionales,
 
 ---
 
-## 🧠 Flujo de Funcionamiento (Streamlit + Gemini AI)
+## 🧠 Flujo de Funcionamiento 
 
 1. **Ingreso de la Oferta:** El usuario pega la descripción completa de la vacante en un área de texto interactiva en la interfaz de Streamlit.
 2. **Carga del Perfil:** El sistema consulta de manera segura la tabla `qa80.perfil_candidato` en PostgreSQL para obtener el contexto actual del candidato.
